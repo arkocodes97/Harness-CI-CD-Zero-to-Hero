@@ -1,7 +1,11 @@
 pipeline:
   stages:
-    - steps:
+    - name: dev
+      id: dev
+      runtime: cloud
+      platform:
+        os: linux
+        arch: amd64
+      steps:
         - run:
             script: echo "hello world"
-      name: dev
-      id: dev
